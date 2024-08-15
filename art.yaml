@@ -1,0 +1,14 @@
+config:
+  target: http://127.0.0.1:8080
+  http:
+    maxSockets: 1
+    timeout: 120
+  phases:
+    - duration: 120
+      rampUp: 20
+      arrivalRate: 40
+scenarios:
+  - flow:
+    - get:
+        url: '/hello'
+    
